@@ -26,7 +26,6 @@ app.use(compression({ level: 6, threshold: 100 * 1000 }));
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-//connection url----mysql://um5ca0ercrpw4cah:wwAVjGTY46hrlGDqm6YP@byovqvd0umvo56p600mu-mysql.services.clever-cloud.com:3306/byovqvd0umvo56p600mu
 const db = mysql.createConnection({
   host: 'bvqxoa5gvbcfjlhvlwrn-mysql.services.clever-cloud.com',
   user: 'uq0syktxvuo7uyvb',
@@ -425,6 +424,6 @@ app.get("/user/validateToken", (req, res) => {
 
 
 
-app.listen(PORT, () => {
-  console.log(`Server is running at http://localhost:${PORT}`);
+app.listen(PORT, '138.197.82.220', () => {
+  console.log(`Server is running at http://138.197.82.220:${PORT}`);
 });
